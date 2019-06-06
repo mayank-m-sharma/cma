@@ -1,0 +1,50 @@
+<nav class=" blue accent-4">
+    <div class="nav-wrapper">
+        <div class="container">
+            <a href="/" class="brand-logo">Home</a>
+            <a href="#!" class="button-collapse" data-activates="mob">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-small-and-down">
+                <li><a href="/course/add">Add Course</a></li>
+                <li><a href="/courses">View all Course</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Filter Result
+                        <i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a onclick="$('.tap-target').tapTarget('open')">Info</a></li>
+            </ul>
+            <ul id='dropdown1' class='dropdown-content blue white-text'>
+                <form action="/filterByDownloaded" method="post">
+                    <input type="hidden">
+                    <input type="submit" class="submitAsLink" value="Downloaded">
+                </form>
+                <form action="/filterByNotDownloaded" method="post">
+                    <input type="hidden">
+                    <input type="submit" class="submitAsLink" value="Not downloaded">
+                </form>
+            </ul>
+        </div>
+    </div>
+    <ul class="side-nav" id="mob">
+        <li><a href="/course/add">Add Course</a></li>
+        <li><a href="/courses">View all Course</a></li>
+    </ul>
+</nav>
+
+<div class="fixed-action-btn">
+    <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="btn btn-floating btn-large cyan">
+        <i class="material-icons">priority_high</i>
+    </a>
+</div>
+<div class="tap-target-wrapper">
+    <div class="tap-target deep blue" data-activates="menu">
+        <div class="tap-target-content white-text">
+            <h5>uTorrent Required!</h5>
+            <p>This Application requires uTorrent to be installed on your system. Click the button to download Utorrent now</p>
+        </div>
+    </div>
+    <div class="tap-target-wave">
+        <a href="https://download-new.utorrent.com/endpoint/utweb/track/beta/os/win" class="btn btn-floating btn-large deep blue darken-2 tap-target-origin">
+            <i class="material-icons">swap_calls</i>
+        </a>
+    </div>
+</div>
